@@ -23,6 +23,8 @@ public class MemberService implements MemberServiceInterface {
         this.addressServiceImpl = addressServiceImpl;
     }
 
+// CRUD ----------------------------------------------------------------------------------------------------------------
+
     @Override
     public List<Member> getMembers() {
         return memberRepository.findAll();
@@ -102,6 +104,7 @@ public class MemberService implements MemberServiceInterface {
         memberRepository.deleteById(id);
     }
 
+// ADDITIONS -----------------------------------------------------------------------------------------------------------
 
     public <T> T validateData(String resource, String field, T value) {
         if (value == null) {
